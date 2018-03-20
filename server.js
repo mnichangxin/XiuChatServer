@@ -54,6 +54,27 @@ router.route('/bears/:bear_id').get(function(req, res) {
         }
     })
 })
+router.route('/bears/:bear_id').get(function(req, res) {
+    
+}).put(function(req, res) {
+    Model.findById(req.params.bear_id, function(err, model) {
+        if (err) {
+            res.send(err)
+        } else {
+            model.name = req.body.name
+        }
+
+        model.save(function(err) {
+            if (err) {
+                res.send(err)
+            } else {
+                res,json({
+                    message: 'Bear updated!'
+                })
+            }
+        })
+    })
+})
 
 app.use('/api', router)
 
