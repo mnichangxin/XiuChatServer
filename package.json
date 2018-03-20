@@ -1,0 +1,15 @@
+{
+  "name": "XiuChatServer",
+  "version": "1.0.0",
+  "description": "The server for XiuChat",
+  "main": "server.js",
+  "scripts": {},
+  "author": "mnichangxin",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.7",
+    "body-parser": "~1.0.1"
+  }
+}
