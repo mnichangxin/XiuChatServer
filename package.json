@@ -8,8 +8,9 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "body-parser": "~1.0.1",
     "express": "^4.16.2",
     "mongoose": "^5.0.7",
-    "body-parser": "~1.0.1"
+    "multer": "^0.1.8"
   }
 }

@@ -2,9 +2,11 @@
 var User = require('../models/user')
 
 module.exports = function(req, res) {
+    var data = req.body
+    
     User.create({
-        name: '18954109152',
-        password: '123456'
+        name: data.name,
+        password: data.password
     }, function(err) {
         res.send('Register success!')
     })

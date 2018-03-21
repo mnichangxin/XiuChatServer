@@ -7,6 +7,6 @@ var login = require('./login')
 var register = require('./register')
 
 router.get('/login', login)
-router.get('/register', register)
+router.post('/register', register)
 
 module.exports = router
