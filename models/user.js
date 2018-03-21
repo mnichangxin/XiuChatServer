@@ -1,5 +1,5 @@
-/* Model --- 登录/注册 */
-var mongoose = require('../utils/db.js')
+/* Model --- 登录 */
+var mongoose = require('../utils/db')
 
 var Schema = new mongoose.Schema({
     name: String,

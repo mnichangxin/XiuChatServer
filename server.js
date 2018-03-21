@@ -1,7 +1,7 @@
 /* Express 服务器 */
 var express = require('express')
 var bodyParser = require('body-parser')
-
+var router = require('./routes/router')
 var app = express()
 
 // 端口号
@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 app.use(bodyParser.json())
+// 使用路由中间件
+app.use('/api', router)
 
 // 启动 Server
 app.listen(port)

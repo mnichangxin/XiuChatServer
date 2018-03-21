@@ -1,5 +1,6 @@
-/* 登录注册路由 */
-var mongoose = require('../utils/db.js')
-var User = require('../')
+/* 登录路由 */
+var User = require('../models/user')
 
-
+module.exports = function(req, res) {
+    res.send('This is a login')
+}
