@@ -1,10 +1,10 @@
-/* Model --- 登录 */
+/* Model --- User */
 var mongoose = require('../utils/db')
 
 var Schema = new mongoose.Schema({
-    name: String,
+    username: String,
     password: String
 })
 
-module.exports = mongoose.model('User', Schema)
+module.exports = mongoose.model('users', Schema)
 

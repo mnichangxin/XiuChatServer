@@ -2,6 +2,7 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var multer = require('multer')
+var session = require('express-session')
 var router = require('./routes/router')
 
 var app = express()
@@ -17,6 +18,13 @@ app.use(bodyParser.urlencoded({
 }))
 // 解析 multipart/form-data
 app.use(multer())
+
+// 使用 express-session 中间件
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: false
+}))
 
 // 使用路由中间件
 app.use('/api', router)

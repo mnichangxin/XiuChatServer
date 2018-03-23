@@ -6,10 +6,14 @@
   "scripts": {},
   "author": "mnichangxin",
   "license": "MIT",
+  "repository": {
+    "git": "git@github.com:mnichangxin/XiuChatServer.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "body-parser": "~1.0.1",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "mongoose": "^5.0.7",
     "multer": "^0.1.8"
   }

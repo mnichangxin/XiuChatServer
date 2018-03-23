@@ -6,7 +6,7 @@ var router = express.Router()
 var login = require('./login')
 var register = require('./register')
 
-router.get('/login', login)
+router.post('/login', login)
 router.post('/register', register)
 
 module.exports = router
