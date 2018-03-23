@@ -16,11 +16,17 @@
 1. 登录接口
 
 请求地址: `/api/login`
+
 请求方式：`POST`
+
 请求参数：`username: (String), password: (String)` 
+
 返回值：`status: 0|1 (Number) 用户名或密码错误|成功`
+
 `msg: (String) 结果描述`
-举例：          
+
+举例：    
+
 ``` json
 {
     "status": 1,
@@ -31,11 +37,17 @@
 2. 注册接口
 
 请求地址: `/api/register`
+
 请求方式：`POST`
+
 请求参数：`username: (String), password: (String)` 
+
 返回值：`status: 0|1 (Number) 用户已存在|注册成功`
+
 `msg: (String) 结果描述`
-举例：          
+
+举例：   
+       
 ``` json
 {
     "status": 1,
