@@ -1,5 +1,6 @@
 /* User */
 var mongoose = require('../utils/db')
+var Following = require('./following')
 
 var Schema = new mongoose.Schema({
     username: String,
