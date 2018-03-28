@@ -12,7 +12,8 @@ module.exports = function(req, res) {
             if (doc == null) {
                 User.create({
                     username: data.username,
-                    password: data.password
+                    password: data.password,
+                    following: null
                 }, function(err) {
                     if (err) {
                         res.send(err)
