@@ -1,7 +1,7 @@
 /* 连接 MongoDB */
 var mongoose = require('mongoose')
 
-// 配置
+// 本地配置
 var HOST = '127.0.0.1'
 var PORT = 27017
 var DATABASE = 'xiuchat'
