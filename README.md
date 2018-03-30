@@ -35,7 +35,7 @@
 ``` json
     {
         "status": 0,
-        "msg": "登录成功"
+        "msg": "用户名和密码有误"
     }
 ```
 
@@ -114,6 +114,41 @@
 ``` json
     {
         "status": 1,
-        "msg": "该用户已关注"
+        "msg": "关注成功"
+    }
+```
+
+4. 取消关注接口
+
+请求地址: `/api/follow`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "follower_id": "关注人 _id（ObjectID）",
+        "following_id": "被关注人 _id（ObjectID）"
+    }
+```
+
+返回值：
+
+-> 该用户未关注
+
+``` json
+    {
+        "status": 0,
+        "msg": "该用户未关注"
+    }
+```
+
+-> 取消关注成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "取消关注成功"
     }
 ```

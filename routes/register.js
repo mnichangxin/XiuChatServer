@@ -13,7 +13,8 @@ module.exports = function(req, res) {
                 User.create({
                     username: data.username,
                     password: data.password,
-                    following: []
+                    following: [],
+                    follower: []
                 }, function(err) {
                     if (err) {
                         res.send(err)
