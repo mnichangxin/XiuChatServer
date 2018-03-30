@@ -13,7 +13,7 @@ module.exports = function(req, res) {
                 User.create({
                     username: data.username,
                     password: data.password,
-                    following: null
+                    following: []
                 }, function(err) {
                     if (err) {
                         res.send(err)
@@ -24,7 +24,7 @@ module.exports = function(req, res) {
                            msg: '注册成功'
                        })
                     }
-                }) 
+                })
             } else {
                 res.json({
                     status: 0,

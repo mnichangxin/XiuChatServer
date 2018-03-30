@@ -5,10 +5,10 @@ var Following = require('./following')
 var Schema = new mongoose.Schema({
     username: String,
     password: String,
-    following: {
+    following: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Following'
-    }
+    }]
 })
 
 module.exports = mongoose.model('User', Schema)
