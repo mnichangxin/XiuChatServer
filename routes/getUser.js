@@ -19,7 +19,7 @@ module.exports = function(req, res) {
         //     }
         // }
     })
-    // .populate('following')
+    .populate('following')
     .exec(function(err, docc) {
         console.log(docc)
         res.send(docc.following)

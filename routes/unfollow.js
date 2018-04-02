@@ -1,48 +1,39 @@
 /* 取消关注路由 */
-var User = require('../models/user')
+var Follows = require('../models/follows')
 
 module.exports = function(req, res) {
     var data = req.body
 
-    User.findOne({_id: data.follower_id}, function(err, doc) {
+    Follows.findOne({following_id: data.following_id}, function(err, doc) {
         if (err) {
             res.send(err)
-            console.log(err)
+            return
         } else {
-            User.findOne({following: data.following_id}, function(err, docc) {
-                if (err) {
-                    res.send(err)
-                    console.log(err)
+            if (doc == null) {
+                res.send({
+                    status: -1,
+                    msg: '系统错误'
+                })
+            } else {
+                if (doc.follower_id == data.follower_id) {
+                    Follows.remove({following_id: doc.following_id}, function(err) {
+                        if (err) {
+                            res.send(err)
+                            return
+                        } else {
+                            res.send({
+                                status: 1,
+                                msg: '取消关注成功'
+                            })
+                        }
+                    })
                 } else {
-                    if (docc == null) { 
-                        res.send({
-                            status: 0,
-                            msg: '该用户未关注'
-                        })
-                    } else {
-                        // 更新关注人
-                        User.update({_id: data.follower_id}, {'$pull': {following: data.following_id}}, function(err) {
-                            if (err) {
-                                res.send(err)
-                                console.log(err)
-                            } else {
-                                // 更新被关注人
-                                User.update({_id: data.following_id}, {'$pull': {follower: data.follower_id}}, function(err) {
-                                    if (err) {
-                                        res.send(err)
-                                        console.log(err)
-                                    } else {
-                                        res.send({
-                                            status: 1,
-                                            msg: '取消关注成功'
-                                        })
-                                    }
-                                })
-                            }
-                        })
-                    }
+                    res.send({
+                        status: 0,
+                        msg: '该用户未关注'
+                    })
                 }
-            })
-        }   
+            }
+        }
     })
 }

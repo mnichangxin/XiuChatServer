@@ -93,8 +93,8 @@
 
 ``` json
     {
-        "follower_id": "关注人 _id（ObjectID）",
-        "following_id": "被关注人 _id（ObjectID）"
+        "following_id": "关注人 _id（ObjectID）",
+        "follower_id": "被关注人 _id（ObjectID）"
     }
 ```
 
@@ -128,12 +128,22 @@
 
 ``` json
     {
-        "follower_id": "关注人 _id（ObjectID）",
-        "following_id": "被关注人 _id（ObjectID）"
+        "following_id": "关注人 _id（ObjectID）",
+        "follower_id": "被关注人 _id（ObjectID）"
     }
 ```
 
 返回值：
+
+-> 系统错误
+
+``` json 
+
+    {
+        "status": -1,
+        "msg": "系统错误"
+    }
+```
 
 -> 该用户未关注
 
