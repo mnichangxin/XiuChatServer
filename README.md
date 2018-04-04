@@ -183,9 +183,9 @@
 
 ``` json
     [
-        "_id": "用户 _id（ObjectID）",
-        "_id": "用户 _id（ObjectID）",
-        "...": "..."
+        "用户 _id（ObjectID）",
+        "用户 _id（ObjectID）",
+        "......"
     ]
 ```
 
@@ -209,8 +209,8 @@
 
 ``` json
     [
-        "_id": "用户 _id（ObjectID）",
-        "_id": "用户 _id（ObjectID）",
-        "...": "..."
+        "用户 _id（ObjectID）",
+        "用户 _id（ObjectID）",
+        "......"
     ]
 ```
