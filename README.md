@@ -162,3 +162,55 @@
         "msg": "取消关注成功"
     }
 ```
+
+5. 获得关注列表接口
+
+请求地址: `/api/getFollowing`
+
+请求方式：`GET`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）"
+    }
+```
+
+返回值：
+
+-> 关注列表
+
+``` json
+    [
+        "_id": "用户 _id（ObjectID）",
+        "_id": "用户 _id（ObjectID）",
+        ...
+    ]
+```
+
+6. 获得粉丝列表接口
+
+请求地址: `/api/getFollower`
+
+请求方式：`GET`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）"
+    }
+```
+
+返回值：
+
+-> 粉丝列表
+
+``` json
+    [
+        "_id": "用户 _id（ObjectID）",
+        "_id": "用户 _id（ObjectID）",
+        ...
+    ]
+```

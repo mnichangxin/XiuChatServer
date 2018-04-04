@@ -7,12 +7,14 @@ var login = require('./login')
 var register = require('./register')
 var follow = require('./follow')
 var unfollow = require('./unfollow')
-var getUser = require('./getUser')
+var getFollowing = require('./getFollowing')
+var getFollower = require('./getFollower')
 
 router.post('/login', login)
 router.post('/register', register)
 router.post('/follow', follow)
 router.post('/unfollow', unfollow)
-router.get('/getUser', getUser)
+router.get('/getFollowing', getFollowing)
+router.get('/getFollower', getFollower)
 
 module.exports = router
