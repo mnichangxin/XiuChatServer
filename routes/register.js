@@ -1,5 +1,6 @@
 /* 注册路由 */
 var User = require('../models/user')
+var UserInfo = require('../models/userInfo')
 
 module.exports = function(req, res) {
     var data = req.body
@@ -13,14 +14,29 @@ module.exports = function(req, res) {
                 User.create({
                     username: data.username,
                     password: data.password
-                }, function(err) {
+                }, function(err, user) {
                     if (err) {
-                        res.send(err)
+                        res.send(err) 
                         return
                     } else {
-                        res.send({
-                            status: 1,
-                            msg: '注册成功'
+                        UserInfo.create({
+                            _id: user._id,
+                            nickname: '',
+                            avatar: '',
+                            sex: '',
+                            birthday: new Date, 
+                            area: '',
+                            signature: ''
+                        }, function(err) {
+                            if (err) {
+                                res.send(err)
+                                return
+                            } else {
+                                res.send({
+                                    status: 1,
+                                    msg: '注册成功'
+                                })
+                            }
                         })
                     }
                 })
