@@ -1,14 +1,30 @@
-/* 获得用户信息路由 */
+/* 获得关注列表 */
 var User = require('../models/user')
 var Follows = require('../models/follows')
 
 module.exports = function(req, res) {
     var data = req.query
-
-    Follows.findOne({following_id: data.following_id})
+    
+    Follows
+        .find({following_id: data._id})
         .populate('following_id')
-        .exec(function(err, doc) {
-            res.send(doc)
+        .exec(function(err, docs) {
+            if (err) {
+                res.send(err)
+                return
+            } else {    
+                if (docs == []) {
+                    res.send([])
+                } else {
+                    var followings = []
+
+                    docs.forEach(function(doc) {
+                        followings.push(doc.following_id)
+                    })
+
+                    res.send(followings)
+                }
+            }
         })
 }
 
