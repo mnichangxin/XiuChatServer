@@ -173,7 +173,9 @@
 
 ``` json
     {
-        "_id": "用户 _id（ObjectID）"
+        "_id": "用户 _id（ObjectID）",
+        "page": "页码",
+        "limit": "页数据量"
     }
 ```
 
@@ -199,7 +201,9 @@
 
 ``` json
     {
-        "_id": "用户 _id（ObjectID）"
+        "_id": "用户 _id（ObjectID）",
+        "page": "页码",
+        "limit": "页数据量"
     }
 ```
 
