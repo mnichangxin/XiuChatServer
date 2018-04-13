@@ -13,7 +13,8 @@ module.exports = function(req, res) {
             if (doc == null) {
                 User.create({
                     username: data.username,
-                    password: data.password
+                    password: data.password,
+                    token: null
                 }, function(err, user) {
                     if (err) {
                         res.send(err) 
@@ -21,7 +22,7 @@ module.exports = function(req, res) {
                     } else {
                         UserInfo.create({
                             _id: user._id,
-                            nickname: '',
+                            nickname: data.username,
                             avatar: '',
                             sex: '',
                             birthday: new Date, 

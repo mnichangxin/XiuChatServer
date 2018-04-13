@@ -1,5 +1,6 @@
 /* 登录路由 */
 var User = require('../models/user')
+var random = require('../utils/random')
 
 module.exports = function(req, res) {
     var data = req.body
@@ -13,11 +14,25 @@ module.exports = function(req, res) {
             return
         } else {
             if (doc != null) {
-                res.send({
-                    status: 1,
-                    msg: '登录成功'
+                var token = random(32)
+                User.updateOne({
+                    username: doc.username
+                }, {
+                    token: token
+                }, function(err) {
+                    if (err) {
+                        res.send(err)
+                        return
+                    } else {
+                        res.send({
+                            status: 1,
+                            msg: '登录成功',
+                            data: {
+                                token: token
+                            }
+                        })
+                    }
                 })
-                req.session.username = data.username
             } else {
                 res.send({
                     status: 0,

@@ -44,7 +44,10 @@
 ``` json
     {
         "status": 1,
-        "msg": "登录成功"
+        "msg": "登录成功",
+        "data": {
+            "token": "随机字符串 token"
+        }
     }
 ```
 
@@ -217,4 +220,83 @@
         "用户 _id（ObjectID）",
         "......"
     ]
+```
+
+6. 更新用户信息接口
+
+请求地址: `/api/updateUserInfo`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）",
+        "token": "随机字符串 token",
+        "data": {
+            "nickname": "...",
+            "avatar": "...",
+            "......"
+        }
+    }
+```
+
+返回值：
+
+-> 用户未登录
+
+``` json
+    {
+        "status": 0,
+        "msg": "用户未登录"
+    }
+```
+
+-> 更新成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "更新成功"
+    }
+```
+
+7. 获得用户信息接口
+
+请求地址: `/api/getUserInfo`
+
+请求方式：`GET`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）"
+    }
+```
+
+返回值：
+
+-> 用户未登录
+
+``` json
+    {
+        "status": 0,
+        "msg": "该用户不存在"
+    }
+```
+
+-> 更新成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "成功",
+        "data": {
+            "nickname": "...",
+            "avatar": "...",
+            "......"
+        }
+    }
 ```
