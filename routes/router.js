@@ -12,6 +12,9 @@ var getFollowing = require('./getFollowing')
 var getFollower = require('./getFollower')
 var getUserInfo = require('./getUserInfo')
 var updateUserInfo = require('./updateUserInfo')
+var createDynamic = require('./createDynamic')
+var deleteDynamic = require('./deleteDynamic')
+var getUserDynamic = require('./getUserDynamic')
 
 router.post('/login', login)
 router.post('/register', register)
@@ -22,5 +25,8 @@ router.get('/getFollowing', getFollowing)
 router.get('/getFollower', getFollower)
 router.get('/getUserInfo', getUserInfo)
 router.post('/updateUserInfo', updateUserInfo)
+router.post('/createDynamic', createDynamic)
+router.post('/deleteDynamic', deleteDynamic)
+router.get('/getUserDynamic', getUserDynamic)
 
 module.exports = router

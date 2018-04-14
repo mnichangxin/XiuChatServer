@@ -9,7 +9,7 @@ module.exports = function(req, res) {
 
     Follows
         .find({follower_id: data._id})
-        .populate('following_id')
+        .populate('_id')
         .skip((page - 1) * limit)
         .limit(limit)
         .exec(function(err, docs) {
@@ -23,7 +23,7 @@ module.exports = function(req, res) {
                     var followers = []
 
                     docs.forEach(function(doc) {
-                        followers.push(doc.following_id._id)
+                        followers.push(doc._id._id)
                     })
 
                     res.send(followers)

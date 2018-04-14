@@ -284,3 +284,86 @@
         }
     }
 ```
+
+**9. 创建动态接口**
+
+请求地址: `/api/createDynamic`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "origin_id": "用户 _id（ObjectID）",
+        "type": "类型：Share/Story",
+        "content": "内容",
+        "story": "故事",
+        "token": "用户 token"
+    }
+```
+
+返回值：
+
+-> 创建成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "创建成功"
+    }
+```
+
+**10. 删除动态接口**
+
+请求地址: `/api/deleteDynamic`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "_id": "动态 _id（ObjectID）",
+        "token": "用户 token"
+    }
+```
+
+返回值：
+
+-> 删除成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "删除成功"
+    }
+```
+
+**11. 获取用户动态列表接口**
+
+请求地址: `/api/getUserDynamic`
+
+请求方式：`GET`
+
+请求参数：
+
+``` json
+    {
+        "origin_id": "用户 _id（ObjectID）",
+        "page": "页码",
+        "limit": "页数据量",
+        "token": "用户 token"
+    }
+```
+
+返回值：
+
+-> 获取成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "获取成功"
+    }
+```

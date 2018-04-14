@@ -8,7 +8,7 @@ module.exports = function(req, res) {
         limit = parseInt(data.limit) // 页数据量
 
     Follows
-        .find({following_id: data._id})
+        .find({_id: data._id})
         .populate('follower_id')
         .skip((page - 1) * limit)
         .limit(limit)
