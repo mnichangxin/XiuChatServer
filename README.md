@@ -46,7 +46,7 @@
         "status": 1,
         "msg": "登录成功",
         "data": {
-            "token": "随机字符串 token"
+            "token": "用户 token"
         }
     }
 ```
@@ -98,7 +98,7 @@
     {
         "_id": "关注人 _id（ObjectID）",
         "follower_id": "被关注人 _id（ObjectID）",
-        "token": "随机字符串 token"
+        "token": "用户 token"
     }
 ```
 
@@ -134,7 +134,7 @@
     {
         "_id": "关注人 _id（ObjectID）",
         "follower_id": "被关注人 _id（ObjectID）",
-        "token": "随机字符串 token"      
+        "token": "用户 token"      
     }
 ```
 
@@ -240,7 +240,7 @@
             "avatar": "...",
             "......"
         },
-        "token": "随机字符串 token"
+        "token": "用户 token"
     }
 ```
 
