@@ -96,8 +96,9 @@
 
 ``` json
     {
-        "following_id": "关注人 _id（ObjectID）",
-        "follower_id": "被关注人 _id（ObjectID）"
+        "_id": "关注人 _id（ObjectID）",
+        "follower_id": "被关注人 _id（ObjectID）",
+        "token": "随机字符串 token"
     }
 ```
 
@@ -131,8 +132,9 @@
 
 ``` json
     {
-        "following_id": "关注人 _id（ObjectID）",
-        "follower_id": "被关注人 _id（ObjectID）"
+        "_id": "关注人 _id（ObjectID）",
+        "follower_id": "被关注人 _id（ObjectID）",
+        "token": "随机字符串 token"      
     }
 ```
 
@@ -233,25 +235,16 @@
 ``` json
     {
         "_id": "用户 _id（ObjectID）",
-        "token": "随机字符串 token",
         "data": {
             "nickname": "...",
             "avatar": "...",
             "......"
-        }
+        },
+        "token": "随机字符串 token"
     }
 ```
 
 返回值：
-
--> 用户未登录
-
-``` json
-    {
-        "status": 0,
-        "msg": "用户未登录"
-    }
-```
 
 -> 更新成功
 
@@ -278,21 +271,12 @@
 
 返回值：
 
--> 用户未登录
-
-``` json
-    {
-        "status": 0,
-        "msg": "该用户不存在"
-    }
-```
-
--> 更新成功
+-> 获取成功
 
 ``` json
     {
         "status": 1,
-        "msg": "成功",
+        "msg": "获取成功",
         "data": {
             "nickname": "...",
             "avatar": "...",

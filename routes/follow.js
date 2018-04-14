@@ -4,7 +4,7 @@ var Follows = require('../models/follows')
 module.exports = function(req, res) {
     var data = req.body
 
-    Follows.find({following_id: data.following_id}, function(err, docs) {
+    Follows.find({_id: data._id}, function(err, docs) {
         if (err) {
             res.send(err)
             return
@@ -26,7 +26,7 @@ module.exports = function(req, res) {
                 })
             } else {
                 Follows.create({
-                    following_id: data.following_id,
+                    _id: data._id,
                     follower_id: data.follower_id
                 }, function(err) {
                     if (err) {
@@ -41,5 +41,5 @@ module.exports = function(req, res) {
                 })
             }
         }
-    })
+    })   
 }

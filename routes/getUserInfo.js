@@ -4,8 +4,6 @@ var UserInfo = require('../models/userInfo')
 module.exports = function(req, res) {
     var data = req.query
 
-    console.log(data._id)
-
     UserInfo.findOne({
         _id: data._id
     }, function(err, doc) {
@@ -21,7 +19,7 @@ module.exports = function(req, res) {
             } else {
                 res.send({
                     status: 1,
-                    msg: '成功',
+                    msg: '获取成功',
                     data: {
                         nickname: doc.username,
                         avatar: doc.avatar,
