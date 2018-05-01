@@ -25,7 +25,7 @@ module.exports = function(req, res) {
                             nickname: data.username,
                             avatar: '',
                             sex: '',
-                            birthday: new Date, 
+                            birthday: '', 
                             area: '',
                             signature: ''
                         }, function(err) {

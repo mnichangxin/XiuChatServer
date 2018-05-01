@@ -28,6 +28,7 @@ module.exports = function(req, res) {
                             status: 1,
                             msg: '登录成功',
                             data: {
+                                _id: doc._id,
                                 token: token
                             }
                         })

@@ -46,6 +46,7 @@
         "status": 1,
         "msg": "登录成功",
         "data": {
+            "_id": "用户 _id（ObjectID）"
             "token": "用户 token"
         }
     }
@@ -280,7 +281,9 @@
         "data": {
             "nickname": "...",
             "avatar": "...",
-            "......"
+            "......",
+            "following_num": "...",
+            "followed_num": "..."
         }
     }
 ```
