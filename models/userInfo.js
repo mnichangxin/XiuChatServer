@@ -7,7 +7,7 @@ var Schema = new mongoose.Schema({
     nickname: String, // 昵称
     avatar: String, // 头像
     sex: String, // 性别
-    birthday: Date, // 生日 
+    birthday: String, // 生日 
     area: String, // 地区
     signature: String // 签名
 })

@@ -2,11 +2,18 @@
 var UserInfo = require('../models/userInfo')
 
 module.exports = function(req, res) {
-    var data = req.body
-    
+    var data = req.body    
+    var updateData = {}
+
+    updateData.nickname = data.nickname
+    updateData.birthday = data.birthday
+    updateData.sex      = data.sex
+    updateData.area     = data.area
+    updateData.signature = data.signature
+
     UserInfo.updateOne({
         _id: data._id
-    }, data.data , function(err) {
+    }, updateData , function(err) {
         if (err) {
             res.send(err)
             return

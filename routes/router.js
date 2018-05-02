@@ -33,6 +33,6 @@ router.post('/deleteDynamic', deleteDynamic)
 router.get('/getAllUserDynamic', getAllUserDynamic)
 router.get('/getUserDynamic', getUserDynamic)
 router.post('/favDynamic', favDynamic)
-router.ppost('/commitDynamic', commitDynamic)
+router.post('/commitDynamic', commitDynamic)
 
 module.exports = router

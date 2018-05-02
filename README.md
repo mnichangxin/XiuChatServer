@@ -236,12 +236,10 @@
 ``` json
     {
         "_id": "用户 _id（ObjectID）",
-        "data": {
-            "nickname": "...",
-            "avatar": "...",
-            "......"
-        },
-        "token": "用户 token"
+        "token": "用户 token",
+        "nickname": "...",
+        "avatar": "...",
+        "......"
     }
 ```
 
