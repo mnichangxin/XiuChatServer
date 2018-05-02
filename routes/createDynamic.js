@@ -7,7 +7,7 @@ module.exports = function(req, res) {
     Dynamic.create({
         origin_id: data._id,
         share: data.share,
-        type: data.type,
+        type: parseInt(data.type),
         story: data.story,
         fav: 0,
         commit: []
