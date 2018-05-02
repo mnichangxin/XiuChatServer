@@ -14,7 +14,9 @@ var getUserInfo = require('./getUserInfo')
 var updateUserInfo = require('./updateUserInfo')
 var createDynamic = require('./createDynamic')
 var deleteDynamic = require('./deleteDynamic')
+var getAllUserDynamic = require('./getAllUserDynamic')
 var getUserDynamic = require('./getUserDynamic')
+var favDynamic = require('./favDynamic')
 
 router.post('/login', login)
 router.post('/register', register)
@@ -27,6 +29,9 @@ router.get('/getUserInfo', getUserInfo)
 router.post('/updateUserInfo', updateUserInfo)
 router.post('/createDynamic', createDynamic)
 router.post('/deleteDynamic', deleteDynamic)
+router.get('/getAllUserDynamic', getAllUserDynamic)
 router.get('/getUserDynamic', getUserDynamic)
+router.post('/favDynamic', favDynamic)
+
 
 module.exports = router

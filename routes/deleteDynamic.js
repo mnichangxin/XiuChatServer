@@ -4,7 +4,7 @@ var Dynamic = require('../models/dynamic')
 module.exports = function(req, res) {
     var data = req.body
 
-    Dynamic.remove({_id: data._id}, function(err) {
+    Dynamic.removeOne({_id: data._id}, function(err) {
         if (err) {
             res.send(err)
             return

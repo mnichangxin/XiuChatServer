@@ -46,7 +46,7 @@
         "status": 1,
         "msg": "登录成功",
         "data": {
-            "_id": "用户 _id（ObjectID）"
+            "_id": "用户 _id（ObjectID）",
             "token": "用户 token"
         }
     }
@@ -288,7 +288,7 @@
     }
 ```
 
-**9. 创建动态接口**
+**9. 创建个人动态接口**
 
 请求地址: `/api/createDynamic`
 
@@ -298,9 +298,9 @@
 
 ``` json
     {
-        "origin_id": "用户 _id（ObjectID）",
-        "type": "类型：Share/Story",
-        "content": "内容",
+        "_id": "用户 _id（ObjectID）",
+        "type": "类型：Share(0) / Story(1)",
+        "share": "分享",
         "story": "故事",
         "token": "用户 token"
     }
@@ -317,7 +317,7 @@
     }
 ```
 
-**10. 删除动态接口**
+**10. 删除个人动态接口**
 
 请求地址: `/api/deleteDynamic`
 
@@ -343,7 +343,7 @@
     }
 ```
 
-**11. 获取用户动态列表接口**
+**11. 获取用户个人动态列表接口**
 
 请求地址: `/api/getUserDynamic`
 
@@ -355,8 +355,7 @@
     {
         "origin_id": "用户 _id（ObjectID）",
         "page": "页码",
-        "limit": "页数据量",
-        "token": "用户 token"
+        "limit": "页数据量"
     }
 ```
 
@@ -368,5 +367,54 @@
     {
         "status": 1,
         "msg": "获取成功"
+    }
+```
+
+**12. 获取全部用户动态列表接口**
+
+请求地址： `/api/getAllUserDynamic`
+
+请求方式：`GET`
+
+请求参数：
+
+``` json
+    {
+        "page": "页码",
+        "limit": "页数据量"
+    }
+```
+
+-> 获取成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "获取成功"
+    }
+```
+
+**13. 动态点赞接口**
+
+请求地址： `/api/favDynamic`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）",
+        "dynamic_id": "动态 _id（ObjectID）",
+        "token": "用户 token"
+    }
+```
+
+-> 获取成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "点赞/取消成功"
     }
 ```

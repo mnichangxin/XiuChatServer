@@ -1,4 +1,4 @@
-/* 创建动态路由 */
+/* 创建个人动态路由 */
 var Dynamic = require('../models/dynamic')
 
 module.exports = function(req, res) {
@@ -6,7 +6,7 @@ module.exports = function(req, res) {
 
     Dynamic.create({
         origin_id: data._id,
-        content: data.content,
+        share: data.share,
         type: data.type,
         story: data.story,
         fav: 0,

@@ -1,4 +1,4 @@
-/* 获取用户个人动态路由 */
+/* 获取全部用户动态路由 */
 var Dynamic = require('../models/dynamic')
 
 module.exports = function(req, res) {
@@ -8,7 +8,7 @@ module.exports = function(req, res) {
         limit = parseInt(data.limit) // 页数据量
 
     Dynamic
-        .find({origin_id: data._id})
+        .find()
         .skip((page - 1) * limit)
         .limit(limit)
         .exec(function(err, docs) {
