@@ -351,7 +351,7 @@
 
 ``` json
     {
-        "origin_id": "用户 _id（ObjectID）",
+        "_id": "用户 _id（ObjectID）",
         "page": "页码",
         "limit": "页数据量"
     }
@@ -364,7 +364,10 @@
 ``` json
     {
         "status": 1,
-        "msg": "获取成功"
+        "msg": "获取成功",
+        "data": {
+            "": ""
+        }
     }
 ```
 
@@ -388,7 +391,10 @@
 ``` json
     {
         "status": 1,
-        "msg": "获取成功"
+        "msg": "获取成功",
+        "data": {
+            "": ""
+        }
     }
 ```
 
