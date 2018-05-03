@@ -21,16 +21,26 @@ module.exports = function(req, res) {
                 }, {
                     "$inc": {"fav": 1}
                 }, function(err) {
-                    UserActivity.create({
-                        _id: data._id,
-                        type: 0,
-                        dynamic_id: data.dynamic_id
-                    }, function(err) {
-                        res.send({
-                            "status": 1,
-                            "msg": '点赞成功'
-                        })
-                    }) 
+                    if (err) {
+                        res.send(err)
+                        return
+                    } else {
+                        UserActivity.create({
+                            user_id: data._id,
+                            type: 0,
+                            dynamic_id: data.dynamic_id
+                        }, function(err) {
+                            if (err) {
+                                res.send(err)
+                                return
+                            } else {
+                                res.send({
+                                    "status": 1,
+                                    "msg": '点赞成功'
+                                })
+                            }
+                        }) 
+                    }
                 })  
             } else {
                 // 取消点赞
@@ -39,16 +49,26 @@ module.exports = function(req, res) {
                 }, {
                     "$inc": {"fav": -1}
                 }, function(err) {
-                    UserActivity.remove({
-                        _id: data._id,
-                        type: 0,
-                        dynamic_id: data.dynamic_id
-                    }, function(err) {
-                        res.send({
-                            "status": 1,
-                            "msg": '取消点赞成功'
-                        })
-                    }) 
+                    if (err) {
+                        res.send(err)
+                        return
+                    } else {
+                        UserActivity.remove({
+                            user_id: data._id,
+                            type: 0,
+                            dynamic_id: data.dynamic_id
+                        }, function(err) {
+                            if (err) {
+                                res.send(err)
+                                return
+                            } else {
+                                res.send({
+                                    "status": 1,
+                                    "msg": '取消点赞成功'
+                                })
+                            }
+                        }) 
+                    }
                 }) 
             }
         }

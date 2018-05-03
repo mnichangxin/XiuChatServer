@@ -416,3 +416,30 @@
         "msg": "点赞/取消成功"
     }
 ```
+
+
+**14. 动态评论接口**
+
+请求地址： `/api/favDynamic`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）",
+        "dynamic_id": "动态 _id（ObjectID）",
+        "content": "评论内容",
+        "token": "用户 token"
+    }
+```
+
+-> 获取成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "评论成功"
+    }
+```
