@@ -279,7 +279,7 @@
         "data": {
             "nickname": "...",
             "avatar": "...",
-            "......",
+            "...": "...",
             "following_num": "...",
             "followed_num": "..."
         }
@@ -408,7 +408,7 @@
     }
 ```
 
--> 获取成功
+-> 点赞/取消成功
 
 ``` json
     {
@@ -420,7 +420,7 @@
 
 **14. 动态评论接口**
 
-请求地址： `/api/favDynamic`
+请求地址： `/api/commitDynamic`
 
 请求方式：`POST`
 
@@ -435,11 +435,66 @@
     }
 ```
 
--> 获取成功
+-> 评论成功
 
 ``` json
     {
         "status": 1,
         "msg": "评论成功"
+    }
+```
+
+**15. 获取动态详情接口**
+
+请求地址： `/api/getDynamicDetail`
+
+请求方式：`GET`
+
+请求参数：
+
+``` json
+    {
+        "_id": "动态 _id（ObjectID）"
+    }
+```
+
+-> 动态不存在
+
+``` json
+    {
+        "status": 0,
+        "msg": "动态不存在"
+    }
+```
+
+-> 获取成功
+
+``` json
+    {   
+        "status": 1,
+        "msg": "获取成功",
+        "data": {
+            "userInfo": {
+                "_id": "用户 _id（ObjectID）",
+                "nickname": "昵称",
+                "avatar": "头像",
+                "...": "..."
+            },
+            "commiterInfo": [
+                {
+                    "_id": "用户 _id（ObjectID）",
+                    "nickname": "昵称",
+                    "avatar": "头像",
+                    "...": "..."
+                },
+                {
+                    "...": "..."
+                }
+            ],
+            "share": "分享内容",
+            "story": "故事内容",
+            "type": "类型",
+            "fav": "点赞数"
+        }
     }
 ```
