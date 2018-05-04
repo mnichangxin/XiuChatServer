@@ -63,7 +63,7 @@ module.exports = function(req, res) {
                                 return
                             } else {
                                 res.send({
-                                    "status": 1,
+                                    "status": 2,
                                     "msg": '取消点赞成功'
                                 })
                             }
