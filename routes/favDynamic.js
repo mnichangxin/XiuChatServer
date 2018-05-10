@@ -6,7 +6,7 @@ module.exports = function(req, res) {
     var data = req.body
 
     UserActivity.findOne({
-        _id: data._id,
+        user_id: data._id,
         dynamic_id: data.dynamic_id,
         type: 0 
     }, function(err, doc) {

@@ -6,7 +6,8 @@ var Schame = new mongoose.Schema({
     type: Number, // 类型：Share(0) / Story(1)
     share: String, // 分享
     story: String, // 故事
-    fav: Number, // 点赞数
+    fav: Number, // 点赞数,
+    forward: Number, // 转发数
     commit: [{
         commit_id: String,
         commit_content: String

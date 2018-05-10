@@ -9,6 +9,7 @@ module.exports = function(req, res) {
 
     Dynamic
         .find({origin_id: data._id})
+        .sort({_id: -1})
         .skip((page - 1) * limit)
         .limit(limit)
         .exec(function(err, docs) {

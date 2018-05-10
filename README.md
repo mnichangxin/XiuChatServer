@@ -512,3 +512,28 @@
         }
     }
 ```
+
+**16. 动态转发接口**
+
+请求地址： `/api/forwardDynamic`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）",
+        "dynamic_id": "动态 _id（ObjectID）",
+        "token": "用户 token"
+    }
+```
+
+-> 评论成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "转发成功"
+    }
+```
