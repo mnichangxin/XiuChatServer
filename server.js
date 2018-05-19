@@ -8,7 +8,7 @@ var router = require('./routes/router')
 var app = express()
 
 // 端口号
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 8081
 
 // 解析 application/json
 app.use(bodyParser.json())
@@ -32,5 +32,5 @@ app.use('/api', router)
 // 启动 Server
 app.listen(port)
 
-console.log('Server start at 8080...')
+console.log('Server start at 8081...')
 

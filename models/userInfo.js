@@ -1,6 +1,5 @@
 /* 用户信息集合 */
 var mongoose = require('../utils/db')
-var UserInfo = require('./userInfo')
 
 var Schema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId, // 用户 _id

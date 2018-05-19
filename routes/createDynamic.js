@@ -9,6 +9,7 @@ module.exports = function(req, res) {
         share: data.share,
         type: parseInt(data.type),
         story: data.story,
+        forward: 0,
         fav: 0,
         commit: []
     }, function(err, doc) {

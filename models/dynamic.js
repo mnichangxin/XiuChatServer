@@ -9,7 +9,7 @@ var Schame = new mongoose.Schema({
     fav: Number, // 点赞数,
     forward: Number, // 转发数
     commit: [{
-        commit_id: String,
+        commit_id: mongoose.Schema.Types.ObjectId,
         commit_content: String
     }] // 评论
 })

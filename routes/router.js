@@ -20,6 +20,8 @@ var favDynamic = require('./favDynamic')
 var commitDynamic = require('./commitDynamic')
 var forwardDynamic = require('./forwardDynamic')
 var getDynamicDetail = require('./getDynamicDetail')
+var getAllUserActivity = require('./getAllUserActivity')
+var recommendedUsers = require('./recommendedUsers')
 
 router.post('/login', login)
 router.post('/register', register)
@@ -38,5 +40,7 @@ router.post('/favDynamic', favDynamic)
 router.post('/commitDynamic', commitDynamic)
 router.post('/forwardDynamic', forwardDynamic)
 router.get('/getDynamicDetail', getDynamicDetail)
+router.get('/getAllUserActivity', getAllUserActivity)
+router.get('/recommendedUsers', recommendedUsers)
 
 module.exports = router

@@ -4,15 +4,14 @@
   "description": "The server for XiuChat",
   "main": "server.js",
   "scripts": {
+  	"start": "node server.js"
   },
   "author": "mnichangxin",
   "license": "MIT",
   "repository": {
     "git": "git@github.com:mnichangxin/XiuChatServer.git"
   },
-  "dependencies": {
-    "start": "node server.js"
-  },
+  "dependencies": {},
   "devDependencies": {
     "body-parser": "~1.0.1",
     "express": "^4.16.2",

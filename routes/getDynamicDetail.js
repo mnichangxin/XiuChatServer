@@ -32,11 +32,22 @@ module.exports = function(req, res) {
                             UserInfo.findOne({
                                 _id: item.commit_id
                             }, function(err, doccc) {
+                                let ci = {
+                                    _id: doccc._id,
+                                    nickname: doccc.nickname,
+                                    avatar: doccc.avatar,
+                                    sex: doccc.sex,
+                                    birthday: doccc.birthday,
+                                    area: doccc.area,
+                                    signature: doccc.signature,
+                                    commit_content: item.commit_content
+                                }
+
                                 if (err) {
                                     res.send(err)
                                     return
                                 } else {
-                                    commiterInfo.push(doccc)
+                                    commiterInfo.push(ci)
                                 }
                             })
                         })    
@@ -51,7 +62,8 @@ module.exports = function(req, res) {
                                     share: doc.share,
                                     type: doc.type,
                                     story: doc.story,
-                                    fav: doc.fav
+                                    fav: doc.fav,
+                                    forward: doc.forward
                                 }
                             })
                         }, 50)

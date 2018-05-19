@@ -36,6 +36,7 @@ module.exports = function(req, res) {
                                 type: doc.type,
                                 story: doc.story,
                                 fav: doc.fav,
+                                forward: doc.forward,
                                 commit: doc.commit
                             }
 
