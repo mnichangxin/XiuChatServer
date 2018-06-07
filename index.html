@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>socket.io 测试</title>
+	</head>
+	<body>
+		<script src="./socket.io/socket.io.js"></script>
+		<script>
+			var socket = io.connect('http://localhost:8080')
+			
+			socket.emit('join', 'tony')
+
+			socket.on('msg', function(data) {
+				console.log(data)
+			})
+		</script>
+	</body>
+</html>

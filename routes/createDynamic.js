@@ -12,7 +12,7 @@ module.exports = function(req, res) {
         forward: 0,
         fav: 0,
         commit: []
-    }, function(err, doc) {
+    }, function(err) {
         if (err) {
             res.send(err)
             return

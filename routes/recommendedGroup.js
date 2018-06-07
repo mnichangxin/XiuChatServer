@@ -1,5 +1,5 @@
-/* 推荐用户路由 */
-var UserInfo = require('../models/userInfo')
+/* 推荐群聊路由 */
+var Group = require('../models/group')
 
 var getRandomUsers = function(docs, num) {
     var shuffled = docs.slice(0), i = docs.length, min = i - num, temp, index
@@ -27,7 +27,7 @@ module.exports = function(req, res) {
             if (length / 2 == 0) {
                 res.send({
                     status: 0,
-                    msg: '没有可推荐的用户'
+                    msg: '没有可推荐的群聊'
                 })
             } else {
                 var newDocs = getRandomUsers(docs, length / 2)

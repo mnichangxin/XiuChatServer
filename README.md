@@ -576,3 +576,113 @@
         ]
     }
 ```
+
+**18. 推荐用户接口**
+
+请求地址： `/api/recommendedUsers.js`
+
+请求方式：`GET`
+
+请求参数：
+
+``` json
+    {}
+```
+
+-> 获取成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "推荐成功",
+        "data": [
+            {
+                "nickname": "",
+                "...": "..."
+            },
+            {
+                "...": "..."
+            }
+        ]
+    }
+```
+
+**19. 加入群聊接口**
+
+请求地址： `/api/addGroup.js`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）",
+        "group_id": "群聊 _id（ObjectID）",
+        "token": "用户 token"
+    }
+```
+
+-> 加入成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "加入成功",
+        "data": {
+            "groupInfo": {
+                "group_name": "群名",
+                "group_count": "群人数"
+            },
+            "group": [
+                {
+                    "nickname": "",
+                    "...": "..."
+                },
+                {
+                    "...": "..."
+                }
+            ]
+        }
+    }
+```
+
+**20. 获取群聊接口**
+
+请求地址： `/api/getGroup.js`
+
+请求方式：`POST`
+
+请求参数：
+
+``` json
+    {
+        "_id": "用户 _id（ObjectID）",
+        "group_id": "群聊 _id（ObjectID）",
+        "token": "用户 token"
+    }
+```
+
+-> 获取成功
+
+``` json
+    {
+        "status": 1,
+        "msg": "获取成功",
+        "data": {
+            "groupInfo": {
+                "group_name": "群名",
+                "group_count": "群人数"
+            },
+            "group": [
+                {
+                    "nickname": "",
+                    "...": "..."
+                },
+                {
+                    "...": "..."
+                }
+            ]
+        }
+    }
+```

@@ -22,6 +22,9 @@ var forwardDynamic = require('./forwardDynamic')
 var getDynamicDetail = require('./getDynamicDetail')
 var getAllUserActivity = require('./getAllUserActivity')
 var recommendedUsers = require('./recommendedUsers')
+var recommendedGroup = require('./recommendedGroup')
+var createGroup = require('./createGroup')
+var addGroup = require('./addGroup')
 
 router.post('/login', login)
 router.post('/register', register)
@@ -42,5 +45,8 @@ router.post('/forwardDynamic', forwardDynamic)
 router.get('/getDynamicDetail', getDynamicDetail)
 router.get('/getAllUserActivity', getAllUserActivity)
 router.get('/recommendedUsers', recommendedUsers)
+router.get('/recommendedGroup', recommendedGroup)
+router.post('/createGroup', createGroup)
+router.post('/addGroup', addGroup)
 
 module.exports = router

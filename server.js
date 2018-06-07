@@ -6,9 +6,13 @@ var session = require('express-session')
 var router = require('./routes/router')
 
 var app = express()
+var server = require('http').Server(app)
+var io = require('socket.io')(server)
+
+var socket = require('./socket.io/socket.server')
 
 // 端口号
-var port = process.env.PORT || 8081
+var port = process.env.PORT || 8080
 
 // 解析 application/json
 app.use(bodyParser.json())
@@ -30,7 +34,14 @@ app.use(session({
 app.use('/api', router)
 
 // 启动 Server
-app.listen(port)
+server.listen(port)
 
-console.log('Server start at 8081...')
+console.log('Server start at 8080...')
 
+app.get('/chat', function(req, res) {
+    res.sendFile(__dirname + '/index.html')
+})
+
+
+// 启动 Socket 服务
+socket.start(io)
