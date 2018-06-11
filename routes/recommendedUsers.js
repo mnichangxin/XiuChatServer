@@ -17,7 +17,7 @@ var getRandomUsers = function(docs, num) {
 module.exports = function(req, res) {
     var data = req.query
 
-    Group.find(function(err, docs) {
+    UserInfo.find(function(err, docs) {
         if (err) {
             res.send(err)
             return

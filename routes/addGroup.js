@@ -4,8 +4,6 @@ var Group = require('../models/group')
 module.exports = function(req, res) {
     var data = req.body
 
-    
-
     Group.updateOne({
         _id: data.group_id
     }, {
