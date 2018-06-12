@@ -38,10 +38,5 @@ server.listen(port)
 
 console.log('Server start at 8080...')
 
-app.get('/chat', function(req, res) {
-    res.sendFile(__dirname + '/index.html')
-})
-
-
 // 启动 Socket 服务
 socket.start(io)
