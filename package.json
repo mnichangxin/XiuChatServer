@@ -13,10 +13,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "body-parser": "~1.0.1",
+    "body-parser": "^1.18.3",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
-    "mongoose": "^5.0.7",
+    "mongoose": "^5.4.19",
     "multer": "^0.1.8",
     "socket.io": "^2.1.1"
   }
