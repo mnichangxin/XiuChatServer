@@ -4,7 +4,7 @@
 
 ## Introduction
 
-采用 `RESTful API` 架构模式，为客户端 APP 持续提供稳定的数据读取：
+采用 `RESTful API` 架构模式，为客户端 APP 持续提供稳定的数据存取：
 
 * Express 框架 (Node.js)
 * Mongoose 中间件 (MongoDB)
